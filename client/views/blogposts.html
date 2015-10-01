@@ -1,1 +1,13 @@
-<h1></h1>
+
+<div class="new-note">
+  <div class="new-note-container">
+    <form class="form">
+      <div ng-repeat="post in posts">
+        {{ post.title }}
+        {{ post.body }}
+        {{ post.author }}
+      </div>
+      <button class="btn">Save</button>
+    </form>
+  </div>
+</div>

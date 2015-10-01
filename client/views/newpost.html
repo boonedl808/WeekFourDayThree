@@ -1,1 +1,23 @@
-<h1></h1>
+
+<div class="new-note">
+  <div class="new-note-container">
+    <form class="form">
+      <fieldset>
+        <label for="title">Title</label>
+        <input name="title" ng-model="note.title"/>
+      </fieldset>
+
+      <fieldset>
+        <label for="description">Body</label>
+        <textarea name="description" ng-model="note.body"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="content">Author</label>
+        <textarea name="content" ng-model="note.author"></textarea>
+      </fieldset>
+
+      <button class="btn">Save</button>
+    </form>
+  </div>
+</div>
