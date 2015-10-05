@@ -13,7 +13,7 @@ app.factory('Blog', ['$http', function($http) {
             })
             .then(function(response) {
                 // transform the promise of response into a promise of data
-                return response.data;
+                return response.data.results;
             });
     };
     

@@ -5,7 +5,13 @@ var app = angular.module('myBlog.controllers', []);
 app.controller('PostListController', ['$scope', 'Blog', function($scope, Blog) {
 	$scope.posts = [];
 	Blog.getItems().then(function(serverPosts) {
-		$scope.posts.unshift(serverPosts);
+		for (var i = 0; i < serverPosts.length; i++) {
+			$scope.posts.unshift(serverPosts[i]);
+		}
+		// serverPosts.forEach(function(post) {
+		// 	$scope.posts.unshift(post);
+		// });
+		//$scope.posts.unshift(serverPosts);
 	});
 }]);
 
